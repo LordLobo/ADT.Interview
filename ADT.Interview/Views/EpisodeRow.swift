@@ -32,13 +32,26 @@ struct EpisodeRow: View {
                 .font(Font.system(size: 14.0))
         }
         .padding(4)
-        .background(Color.gray)
+        .background(Color("bgYellow"))
         .cornerRadius(6)
     }
 }
 
 struct EpisodeRow_Previews: PreviewProvider {
     static var previews: some View {
-        EpisodeRow(Episode(id: 1, name: "name", air_date: "September 15th, 2020", episode: "S99E99", characters: [], url: "", created:""))
+        Group {
+            VStack {
+                Text("Light Mode")
+                EpisodeRow(Episode(id: 1, name: "name", air_date: "September 15th, 2020", episode: "S99E99", characters: [], url: "", created:""))
+            }
+            
+            VStack {
+                Text("Dark Mode ")
+                EpisodeRow(Episode(id: 1, name: "name", air_date: "September 15th, 2020", episode: "S99E99", characters: [], url: "", created:""))
+                    .environment(\.colorScheme, .dark)
+            }
+        }
+        .previewLayout(.sizeThatFits)
+        .padding(10)
     }
 }

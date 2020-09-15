@@ -27,7 +27,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationBarTitle(Text("Episodes \(self.dataSource.episodes.count)"), displayMode: .large)
+            .navigationBarTitle(Text("Episodes"), displayMode: .large)
         }
         .onAppear {
             // gets rid of seperators

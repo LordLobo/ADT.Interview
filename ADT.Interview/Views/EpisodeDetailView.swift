@@ -38,7 +38,7 @@ struct EpisodeDetailView: View {
             }
             .frame(width: geo.size.width * 0.9)
             .padding(8)
-            .background(Color.gray)
+            .background(Color("bgYellow"))
             .cornerRadius(6)
         }
     }
