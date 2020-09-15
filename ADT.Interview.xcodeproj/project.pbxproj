@@ -21,7 +21,7 @@
 		93BC01F225113E2F00ED3350 /* ResultInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC01F125113E2F00ED3350 /* ResultInfo.swift */; };
 		93BC01F425113E4E00ED3350 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC01F325113E4E00ED3350 /* Coder.swift */; };
 		93BC01F62511400C00ED3350 /* EpisodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC01F52511400C00ED3350 /* EpisodeDetailView.swift */; };
-		93BC01F82511402100ED3350 /* EpisodeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC01F72511402100ED3350 /* EpisodeRowView.swift */; };
+		93BC01F82511402100ED3350 /* EpisodeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC01F72511402100ED3350 /* EpisodeRow.swift */; };
 		93BC01FB2511410900ED3350 /* EpisodeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC01FA2511410900ED3350 /* EpisodeDataSource.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +54,7 @@
 		93BC01F125113E2F00ED3350 /* ResultInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultInfo.swift; sourceTree = "<group>"; };
 		93BC01F325113E4E00ED3350 /* Coder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coder.swift; sourceTree = "<group>"; };
 		93BC01F52511400C00ED3350 /* EpisodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailView.swift; sourceTree = "<group>"; };
-		93BC01F72511402100ED3350 /* EpisodeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeRowView.swift; sourceTree = "<group>"; };
+		93BC01F72511402100ED3350 /* EpisodeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeRow.swift; sourceTree = "<group>"; };
 		93BC01FA2511410900ED3350 /* EpisodeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,7 +142,7 @@
 			children = (
 				930663152510F077003F9653 /* ContentView.swift */,
 				93BC01F52511400C00ED3350 /* EpisodeDetailView.swift */,
-				93BC01F72511402100ED3350 /* EpisodeRowView.swift */,
+				93BC01F72511402100ED3350 /* EpisodeRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 				93BC01EE25113DF100ED3350 /* EpisodeResults.swift in Sources */,
 				930663122510F077003F9653 /* AppDelegate.swift in Sources */,
 				93BC01FB2511410900ED3350 /* EpisodeDataSource.swift in Sources */,
-				93BC01F82511402100ED3350 /* EpisodeRowView.swift in Sources */,
+				93BC01F82511402100ED3350 /* EpisodeRow.swift in Sources */,
 				93BC01F025113E0800ED3350 /* Episode.swift in Sources */,
 				93BC01F62511400C00ED3350 /* EpisodeDetailView.swift in Sources */,
 				930663142510F077003F9653 /* SceneDelegate.swift in Sources */,

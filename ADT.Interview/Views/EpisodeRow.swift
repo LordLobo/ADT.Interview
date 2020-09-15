@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct EpisodeRowView: View {
+struct EpisodeRow: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct EpisodeRowView_Previews: PreviewProvider {
+struct EpisodeRow_Previews: PreviewProvider {
     static var previews: some View {
-        EpisodeRowView()
+        EpisodeRow()
     }
 }

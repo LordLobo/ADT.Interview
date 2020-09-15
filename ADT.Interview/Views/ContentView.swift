@@ -9,16 +9,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var episodes = EpisodeDataSource()
+    @State private var episodes = [Episode]()
+    let api = API()
     
     var body: some View {
         VStack {
             List {
-                Text("list")
+                ForEach(self.episodes, id:\.self) { episode in
+                    //NavigationLink(destination: EpisodeDetailView(episode)) {
+                    //    EpisodeRow(episode)
+                    //}
+                    
+                    Text("\(episode.name)")
+                }
             }
         }
         .onAppear {
-            
+            self.api.getEpisodes() { result in
+                DispatchQueue.main.async {
+                    self.episodes = result!.results
+                }
+            }
         }
     }
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2020 Dan Giralte. All rights reserved.
 //
 
-struct Episode : Codable {
+struct Episode : Codable, Hashable {
     let id:Int
     let name: String //  The name of the episode.
     let air_date: String // The air date of the episode.
