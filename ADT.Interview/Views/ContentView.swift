@@ -9,8 +9,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var episodes = EpisodeDataSource()
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            List {
+                Text("list")
+            }
+        }
+        .onAppear {
+            
+        }
     }
 }
 
