@@ -14,6 +14,8 @@
 		9306631B2510F07A003F9653 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9306631A2510F07A003F9653 /* Preview Assets.xcassets */; };
 		9306631E2510F07A003F9653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9306631C2510F07A003F9653 /* LaunchScreen.storyboard */; };
 		930663292510F07A003F9653 /* ADT_InterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930663282510F07A003F9653 /* ADT_InterviewTests.swift */; };
+		930663342510F42D003F9653 /* SubjectForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930663332510F42D003F9653 /* SubjectForTests.swift */; };
+		9306633725111748003F9653 /* rickandmortyapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306633625111748003F9653 /* rickandmortyapi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		930663242510F07A003F9653 /* ADT.InterviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADT.InterviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		930663282510F07A003F9653 /* ADT_InterviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADT_InterviewTests.swift; sourceTree = "<group>"; };
 		9306632A2510F07A003F9653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		930663332510F42D003F9653 /* SubjectForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectForTests.swift; sourceTree = "<group>"; };
+		9306633625111748003F9653 /* rickandmortyapi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rickandmortyapi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		930663102510F077003F9653 /* ADT.Interview */ = {
 			isa = PBXGroup;
 			children = (
+				9306633525111733003F9653 /* API */,
 				930663112510F077003F9653 /* AppDelegate.swift */,
 				930663132510F077003F9653 /* SceneDelegate.swift */,
 				930663152510F077003F9653 /* ContentView.swift */,
@@ -86,6 +91,7 @@
 				9306631C2510F07A003F9653 /* LaunchScreen.storyboard */,
 				9306631F2510F07A003F9653 /* Info.plist */,
 				930663192510F07A003F9653 /* Preview Content */,
+				930663332510F42D003F9653 /* SubjectForTests.swift */,
 			);
 			path = ADT.Interview;
 			sourceTree = "<group>";
@@ -105,6 +111,14 @@
 				9306632A2510F07A003F9653 /* Info.plist */,
 			);
 			path = ADT.InterviewTests;
+			sourceTree = "<group>";
+		};
+		9306633525111733003F9653 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9306633625111748003F9653 /* rickandmortyapi.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +224,8 @@
 			files = (
 				930663122510F077003F9653 /* AppDelegate.swift in Sources */,
 				930663142510F077003F9653 /* SceneDelegate.swift in Sources */,
+				930663342510F42D003F9653 /* SubjectForTests.swift in Sources */,
+				9306633725111748003F9653 /* rickandmortyapi.swift in Sources */,
 				930663162510F077003F9653 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
