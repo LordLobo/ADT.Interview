@@ -15,24 +15,26 @@ struct ContentView: View {
     let api = API()
     
     var body: some View {
-        VStack {
-            Text("Rick and Morty")
-            
-            List {
-                ForEach(self.episodes, id:\.self) { episode in
-                    NavigationLink(destination: EpisodeDetailView()) {
-                        EpisodeRow(episode)
-                            .onAppear {
-                                self.getNextEpisodes(episode)
-                            }
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(self.episodes, id:\.self) { episode in
+                        NavigationLink(destination: EpisodeDetailView(episode)) {
+                            EpisodeRow(episode)
+                                .onAppear {
+                                    self.getNextEpisodes(episode)
+                                }
+                        }
                     }
                 }
             }
+            .navigationBarTitle(Text("Episodes"), displayMode: .large)
         }
         .onAppear {
             // gets rid of seperators
             UITableView.appearance().separatorStyle = .none
             
+            // get initial results
             self.api.getEpisodes() { result in
                 DispatchQueue.main.async {
                     self.episodes = result!.results
