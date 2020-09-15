@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var episodes = [Episode]()
+    @State private var nextPage = ""
     let api = API()
     
     var body: some View {
@@ -21,6 +22,21 @@ struct ContentView: View {
                     //}
                     
                     Text("\(episode.name)")
+                        .onAppear {
+                            if episode == self.episodes.last && self.nextPage != "" {
+                                self.api.getEpisodes(fromURL: URL(string: self.nextPage)!) { result in
+                                    DispatchQueue.main.async {
+                                        self.episodes.append(contentsOf: result!.results)
+                                        
+                                        if result!.info.next != nil {
+                                            self.nextPage = result!.info.next!
+                                        } else {
+                                            self.nextPage = ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
                 }
             }
         }
@@ -28,6 +44,7 @@ struct ContentView: View {
             self.api.getEpisodes() { result in
                 DispatchQueue.main.async {
                     self.episodes = result!.results
+                    self.nextPage = result!.info.next!
                 }
             }
         }

@@ -12,9 +12,8 @@ let BASE_URL = "https://rickandmortyapi.com/api/"
 let EPISODE_ENDPOINT = BASE_URL + "episode"
 
 class API {
-    func getEpisodes(completion: @escaping (EpisodeResults?) -> Void) {
-        let fullURL = URL(string: EPISODE_ENDPOINT)
-        let req = request(url: fullURL!)
+    func getEpisodes(fromURL: URL = URL(string: EPISODE_ENDPOINT)!, completion: @escaping (EpisodeResults?) -> Void) {
+        let req = request(url: fromURL)
         let getTask = URLSession.shared.dataTask(with: req) { data, response, error in
             if let _ = error {
                 // todo
@@ -29,7 +28,7 @@ class API {
         
         getTask.resume()
     }
-
+    
     func request(url: URL) -> URLRequest {
         var result = URLRequest(url: url)
         result.httpMethod = "GET"
